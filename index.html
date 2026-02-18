@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEIGNA | Plateforme d'annotation de données</title>
+    <title>DEIGNA | Plateforme d'annotation souveraine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #020617; color: #e2e8f0; font-family: 'Inter', sans-serif; }
@@ -18,13 +18,22 @@
                               linear-gradient(to bottom, #1e293b 1px, transparent 1px);
             background-size: 4rem 4rem; opacity: 0.2;
         }
+        /* Assure que l'image ne dépasse jamais sa taille réelle et reste nette */
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
     </style>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body class="relative min-h-screen overflow-x-hidden">
     <div class="grid-overlay"></div>
     <div class="glow-bg"></div>
 
     <div class="relative z-10 max-w-6xl mx-auto px-8 py-16">
+        
         <header class="flex justify-center mb-24">
             <img src="logo.png" alt="DEIGNA" class="h-24 md:h-32 filter brightness-0 invert object-contain">
         </header>
@@ -43,25 +52,48 @@
             </div>
         </main>
 
-        <section class="grid md:grid-cols-3 gap-10 px-4 md:px-12">
-            <div class="bg-slate-900/50 backdrop-blur-xl p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all">
-                <div class="text-3xl mb-4">🛡️</div>
-                <h3 class="text-xl font-bold text-white mb-2">Souveraineté</h3>
-                <p class="text-slate-400 text-sm">Infrastructure Cloud en France et anonymisation automatique des données (RGPD).</p>
+        <section class="flex flex-col lg:flex-row items-center gap-12 mb-40">
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold text-white mb-4">Plateforme souveraine & durable</h2>
+                <p class="text-slate-400 leading-relaxed">
+                    Pilotez vos projets sur une infrastructure d'excellence, 100% localisée en France. En choisissant une solution de cloud souverain, vous garantissez la protection de vos données tout en bénéficiant d'un hébergement à faible empreinte carbone. Deigna réconcilie haute performance technologique et responsabilité environnementale.
+                </p>
             </div>
-            <div class="bg-slate-900/50 backdrop-blur-xl p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition-all">
-                <div class="text-3xl mb-4">💎</div>
-                <h3 class="text-xl font-bold text-white mb-2">Qualité Industrielle</h3>
-                <p class="text-slate-400 text-sm">Workflow de validation par consensus à 66% pour une précision inégalée.</p>
-            </div>
-            <div class="bg-slate-900/50 backdrop-blur-xl p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all">
-                <div class="text-3xl mb-4">🌍</div>
-                <h3 class="text-xl font-bold text-white mb-2">Impact Social</h3>
-                <p class="text-slate-400 text-sm">Une marketplace équitable offrant des revenus flexibles à notre communauté mondiale.</p>
+            <div class="flex-1 img-container">
+                <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-2 shadow-2xl">
+                    <img src="deigna1.png" alt="Dashboard Deigna" class="rounded-lg">
+                </div>
             </div>
         </section>
 
-        <footer class="mt-40 text-center border-t border-slate-800/50 pt-12">
+        <section class="flex flex-col-reverse lg:flex-row items-center gap-12 mb-40">
+            <div class="flex-1 img-container">
+                <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-2 shadow-2xl">
+                    <img src="deigna2.png" alt="Interface Annotation" class="rounded-lg">
+                </div>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold text-white mb-4">Ingestion blindée & flux sécurisé</h2>
+                <p class="text-slate-400 leading-relaxed">
+                    L'humain ne voit que ce qui est sûr. Notre système d'ingestion isole vos données brutes dans un coffre-fort numérique strictement inaccessible aux opérateurs. Ce n'est qu'après un traitement automatisé par notre IA d'anonymisation que les données sont mises à disposition pour l'annotation. Une barrière technologique infranchissable qui garantit une confidentialité totale dès la première seconde.
+            </div>
+        </section>
+
+        <section class="flex flex-col lg:flex-row items-center gap-12 mb-40">
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold text-white mb-4">Une marketplace équitable & précise</h2>
+                <p class="text-slate-400 leading-relaxed">
+                    Deigna redéfinit les standards de l'annotation en plaçant l'humain au cœur de la valeur. Nous offrons une marketplace transparente avec des revenus flexibles et valorisants pour nos contributeurs. Cette approche éthique, couplée à notre système de validation par consensus à 66%, assure une fidélité des annotateurs et une qualité de donnée optimale, une conformité RGPD totale et une souveraineté numérique absolue.
+                </p>
+            </div>
+            <div class="flex-1 img-container">
+                <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-2 shadow-2xl">
+                    <img src="deigna3.png" alt="Module Sécurité" class="rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-20 text-center border-t border-slate-800/50 pt-12">
             <p class="text-sm text-slate-500 tracking-wide">
                 &copy; 2026 DEIGNA. Tous droits réservés.
             </p>
