@@ -39,14 +39,19 @@
         </header>
 
         <main class="text-center mb-32">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+            <div class="fixed top-6 right-8 z-50">
+                <button id="langSwitcher" onclick="toggleLanguage()" class="bg-slate-800/50 hover:bg-slate-700 text-indigo-400 border border-slate-700 px-4 py-2 rounded-lg font-mono text-sm transition-all">
+                    EN
+                </button>
+            </div>
+            <h1 id="hero-title" class="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
                 L'IA au service de <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">l'Humain</span>
             </h1>
-            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+            <p id="hero-sub" class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
                 Nous connectons le besoin en données IA des entreprises à une force de travail mondiale, flexible et inclusive.
             </p>
             <div class="flex justify-center">
-                <a href="mailto:damien.so@deigna.com" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-indigo-500/20">
+                <a id="hero-cta" href="mailto:damien.so@deigna.com" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-indigo-500/20">
                     Demander une Démo
                 </a>
             </div>
@@ -54,8 +59,8 @@
 
         <section class="flex flex-col lg:flex-row items-center gap-12 mb-40">
             <div class="flex-1">
-                <h2 class="text-3xl font-bold text-white mb-4">Plateforme souveraine & durable</h2>
-                <p class="text-slate-400 leading-relaxed">
+                <h2 id="sec1-title" class="text-3xl font-bold text-white mb-4">Plateforme souveraine & durable</h2>
+                <p id="sec1-text" class="text-slate-400 leading-relaxed">
                     Pilotez vos projets sur une infrastructure d'excellence, 100% localisée en France. En choisissant une solution de cloud souverain, vous garantissez la protection de vos données tout en bénéficiant d'un hébergement à faible empreinte carbone. Deigna réconcilie haute performance technologique et responsabilité environnementale.
                 </p>
             </div>
@@ -73,16 +78,16 @@
                 </div>
             </div>
             <div class="flex-1">
-                <h2 class="text-3xl font-bold text-white mb-4">Ingestion blindée & flux sécurisé</h2>
-                <p class="text-slate-400 leading-relaxed">
+                <h2 id="sec2-title" class="text-3xl font-bold text-white mb-4">Ingestion blindée & flux sécurisé</h2>
+                <p id="sec2-text" class="text-slate-400 leading-relaxed">
                     L'humain ne voit que ce qui est sûr. Notre système d'ingestion isole vos données brutes dans un coffre-fort numérique strictement inaccessible aux opérateurs. Ce n'est qu'après un traitement automatisé par notre IA d'anonymisation que les données sont mises à disposition pour l'annotation. Une barrière technologique infranchissable qui garantit une confidentialité totale dès la première seconde.
             </div>
         </section>
 
         <section class="flex flex-col lg:flex-row items-center gap-12 mb-40">
             <div class="flex-1">
-                <h2 class="text-3xl font-bold text-white mb-4">Une marketplace équitable & précise</h2>
-                <p class="text-slate-400 leading-relaxed">
+                <h2 id="sec3-title" class="text-3xl font-bold text-white mb-4">Une marketplace équitable & précise</h2>
+                <p id="sec3-text" class="text-slate-400 leading-relaxed">
                     Deigna redéfinit les standards de l'annotation en plaçant l'humain au cœur de la valeur. Nous offrons une marketplace transparente avec des revenus flexibles et valorisants pour nos contributeurs. Cette approche éthique, couplée à notre système de validation par consensus à 66%, assure une fidélité des annotateurs et une qualité de donnée optimale, une conformité RGPD totale et une souveraineté numérique absolue.
                 </p>
             </div>
@@ -99,5 +104,51 @@
             </p>
         </footer>
     </div>
+    <script>
+        const translations = {
+            fr: {
+                langBtn: "EN",
+                heroTitle: "L'IA au service de <span class='text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400'>l'Humain</span>",
+                heroSub: "Nous connectons le besoin en données IA des entreprises à une force de travail mondiale, flexible et inclusive.",
+                heroCta: "Demander une démo",
+                sec1Title: "Pilotage qouverain & durable",
+                sec1Text: "Pilotez vos projets sur une infrastructure d'excellence, 100% localisée en France. En choisissant une solution de cloud souverain, vous garantissez la protection de vos données tout en bénéficiant d'un hébergement à faible empreinte carbone. Deigna réconcilie haute performance technologique et responsabilité environnementale.",
+                sec2Title: "Ingestion blindée & flux sécurisé",
+                sec2Text: "L'humain ne voit que ce qui est sûr. Notre système d'ingestion isole vos données brutes dans un coffre-fort numérique strictement inaccessible aux opérateurs. Ce n'est qu'après un traitement automatisé par notre IA d'anonymisation que les données sont mises à disposition pour l'annotation. Une barrière technologique infranchissable qui garantit une confidentialité totale dès la première seconde.",
+                sec3Title: "Une marketplace équitable & précise",
+                sec3Text: "Deigna redéfinit les standards de l'annotation en plaçant l'humain au cœur de la valeur. Nous offrons une marketplace transparente avec des revenus flexibles et valorisants pour nos contributeurs. Cette approche éthique, couplée à notre système de validation par consensus à 66%, assure une fidélité des annotateurs et une qualité de donnée optimale, une conformité RGPD totale et une souveraineté numérique absolue."
+            },
+            en: {
+                langBtn: "FR",
+                heroTitle: "AI at the service of <span class='text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400'>Humanity</span>",
+                heroSub: "Connecting corporate AI data needs with a global, flexible, and inclusive workforce.",
+                heroCta: "Request a demo",
+                sec1Title: "Sovereign & sustainable management",
+                sec1Text: "Manage your projects on a top-tier infrastructure, 100% located in France. By choosing a sovereign cloud solution, you ensure data protection while benefiting from low-carbon hosting. Deigna reconciles high technological performance with environmental responsibility.",
+                sec2Title: "Hardened ingestion & secure workflow",
+                sec2Text: "Humans only see what is safe. Our ingestion system isolates your raw data in a digital vault strictly inaccessible to operators. Data is only released for annotation after being processed by our automated anonymization AI. An unbreakable technological barrier ensuring total confidentiality from the very first second.",
+                sec3Title: "A fair & precise marketplace",
+                sec3Text: "Deigna redefines annotation standards by putting humans at the heart of value creation. We offer a transparent marketplace with flexible and rewarding earnings for our contributors. This ethical approach, combined with our 66% consensus validation system, ensures annotator loyalty, optimal data quality, full GDPR compliance, and absolute digital sovereignty."
+            },
+        };
+
+        let currentLang = 'fr';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            const t = translations[currentLang];
+            
+            document.getElementById('langSwitcher').innerText = t.langBtn;
+            document.getElementById('hero-title').innerHTML = t.heroTitle;
+            document.getElementById('hero-sub').innerText = t.heroSub;
+            document.getElementById('hero-cta').innerText = t.heroCta;
+            document.getElementById('sec1-title').innerText = t.sec1Title;
+            document.getElementById('sec1-text').innerText = t.sec1Text;
+            document.getElementById('sec2-title').innerText = t.sec2Title;
+            document.getElementById('sec2-text').innerText = t.sec2Text;
+            document.getElementById('sec3-title').innerText = t.sec3Title;
+            document.getElementById('sec3-text').innerText = t.sec3Text;
+        }
+    </script>
 </body>
 </html>
